@@ -1,4 +1,4 @@
-## Admin React App(created for [streaming-app](https://github.com/codesagecoder/sreaming-app))
+## Admin React App(created for [streaming-app](https://github.com/codesagecoder/streaming-app))
 This is a very simple admin dashboard to upload new content, manage content, and view analytics.
 
 ## How to run the App
