@@ -8,6 +8,13 @@ This is a very simple admin dashboard to upload new content, manage content, and
 3. Launch the server with `npm start` command. The app will launch on localhost:3000 automatically.
 
 ## Screenshots
+![alt text](https://github.com/codesagecoder/streaming-app-admin/blob/master/screenshots/Screenshot%202021-12-23%20102311.png) 
+
+![alt text](https://github.com/codesagecoder/streaming-app-admin/blob/master/screenshots/Screenshot%202021-12-23%20102352.png) 
+
+![alt text](https://github.com/codesagecoder/streaming-app-admin/blob/master/screenshots/Screenshot%202021-12-23%20102432.png) 
+
+![alt text](https://github.com/codesagecoder/streaming-app-admin/blob/master/screenshots/Screenshot%202021-12-23%20102511.png) 
 
 ## Dependencies
 - nodejs
