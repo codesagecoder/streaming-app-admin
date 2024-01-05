@@ -1,31 +1,20 @@
+import { Link, useParams } from "react-router-dom";
 import "./media.css";
-import { Link, useLocation, useParams } from "react-router-dom";
 // import Chart from "../../components/chart/Chart";
-import { Publish } from "@material-ui/icons";
+import { Publish } from "@mui/icons-material";
+import { useContext, useEffect, useState } from "react";
 import { MovieContext } from "../../context/movieContext/MovieContext";
-import { updateMovie } from "../../context/movieContext/apiCalls";
-import { useContext } from "react";
-import { useState } from "react";
-import axios from "axios";
+import { getMovie, updateMovie } from "../../context/movieContext/apiCalls";
 
 export default function Media() {
-  const location = useLocation();
   const params = useParams();
   const { dispatch } = useContext(MovieContext);
 
-  async function getMovie() {
-    const res = await axios.get("/movies/find/" + params.movieId, {
-      headers: {
-        token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
-      },
-    });
-    setMovie(res.data);
-  }
+  const [movie, setMovie] = useState({});
 
-  const [movie, setMovie] = useState(
-    location.hasOwnProperty("movie") ? location.movie : {}
-  );
-  Object.keys(movie).length === 0 && getMovie();
+  useEffect(() => {
+    getMovie(params.movieId).then((data) => { setMovie(data) });
+  }, [])
 
   const handleUpdate = (e) => {
     e.preventDefault();

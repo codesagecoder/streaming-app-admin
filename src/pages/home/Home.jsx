@@ -31,7 +31,7 @@ export default function Home() {
   // useEffect(() => {
   //   const getStats = async () => {
   //     try {
-  //       const res = await axios.get("/users/stats", {
+  //       const res = await axios.get("/api/users/stats", {
   //         headers: { token: "Bearer XXXX XXXXX" },
   //       });
   //       const statsList = res.data.sort((a,b)=> a._id - b._id);

@@ -12,8 +12,7 @@ import {
     Report,
     LineStyle,
     PlayCircleOutline,
-  } from "@material-ui/icons";
-import React from "react";
+  } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 

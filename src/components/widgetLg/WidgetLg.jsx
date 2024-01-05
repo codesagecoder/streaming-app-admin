@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../../constansts";
 import "./widgetLg.css";
 
 export default function WidgetLg({ data }) {
@@ -16,11 +17,11 @@ export default function WidgetLg({ data }) {
             <th className="widgetLgTh">Amount</th>
             <th className="widgetLgTh">Status</th>
           </tr>
-          {data.map((user, i) => 
+          {data.map((user) =>
             <tr key={user.id} className="widgetLgTr">
               <td className="widgetLgUser">
                 <img
-                  src={process.env.PUBLIC_URL + "/no-user.jpg"}
+                  src={PUBLIC_URL + "/no-user.jpg"}
                   alt=""
                   className="widgetLgImg"
                 />

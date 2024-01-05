@@ -53,7 +53,7 @@ export const userData = [
     {
       id: 1,
       username: "John",
-      avatar: process.env.PUBLIC_URL+"/no-user.jpg",
+      avatar: "/no-user.jpg",
       email: "john@leaf.com",
       status: "Approved",
       transaction: "$10",
@@ -63,7 +63,7 @@ export const userData = [
     {
       id: 4,
       username: "Adam",
-      avatar: process.env.PUBLIC_URL+"/no-user.jpg",
+      avatar: "/no-user.jpg",
       email: "adam@leaf.com",
       status: "Declined",
       transaction: "$55",
@@ -73,7 +73,7 @@ export const userData = [
     {
       id: 2,
       username: "codeage",
-      avatar: process.env.PUBLIC_URL+"/no-user.jpg",
+      avatar: "/no-user.jpg",
       email: "codesage@leaf.com",
       status: "Approved",
       transaction: "$120",
@@ -82,7 +82,7 @@ export const userData = [
     {
       id: 3,
       username: "shaun",
-      avatar: process.env.PUBLIC_URL+"/no-user.jpg",
+      avatar: "/no-user.jpg",
       email: "shaun@leaf.com",
       status: "Pending",
       transaction: "$27",

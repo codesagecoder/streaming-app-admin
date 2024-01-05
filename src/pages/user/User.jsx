@@ -5,8 +5,9 @@ import {
   PermIdentity,
   PhoneAndroid,
   Publish,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { PUBLIC_URL } from "../../constansts";
 import "./user.css";
 // import Luffy from './Luffy.jpg'
 
@@ -105,12 +106,12 @@ export default function User() {
             <div className="userUpdateRight">
               <div className="userUpdateUpload">
                 <img
-                  src={process.env.PUBLIC_URL+"/no-user.jpg"}
+                  src={PUBLIC_URL + "/no-user.jpg"}
                   alt=""
                   className="userUpdateImg"
                 />
                 <label htmlFor="file">
-                  <Publish className="userUpdateIcon"/>
+                  <Publish className="userUpdateIcon" />
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>

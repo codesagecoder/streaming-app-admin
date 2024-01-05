@@ -1,4 +1,4 @@
-import { Visibility } from "@material-ui/icons";
+import { Visibility } from "@mui/icons-material";
 import "./widgetSm.css";
 // import { useEffect, useState } from "react";
 // import axios from "axios";
@@ -8,7 +8,7 @@ export default function WidgetSm({ data }) {
   // useEffect(() => {
   //   const getNewUsers = async () => {
   //     try {
-  //       const res = axios.get("/users?new=true", {
+  //       const res = axios.get("/api/users?new=true", {
   //         headers: { token: "Bearer XXX XXXX XXXX XXX" },
   //       });
   //       setNewUsers(res.data)

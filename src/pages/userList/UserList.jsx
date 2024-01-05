@@ -1,18 +1,19 @@
-import { DataGrid } from "@material-ui/data-grid";
-import { DeleteOutline } from "@material-ui/icons";
+import { DataGrid } from "@mui/x-data-grid";
+import { DeleteOutline } from "@mui/icons-material";
 import "./userList.css";
 import { userRows as rows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { PUBLIC_URL } from "../../constansts";
 
 export default function UserList() {
   const [data, setData] = useState(rows);
 
-  const handleDelete= (id)=>{
-      console.log('pressed')
-      setData(data.filter(item=>item.id !== id));
+  const handleDelete = (id) => {
+    console.log('pressed')
+    setData(data.filter(item => item.id !== id));
   };
-    const columns = [
+  const columns = [
     { field: "id", headerName: "ID", width: 100 },
     {
       field: "user",
@@ -21,7 +22,7 @@ export default function UserList() {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImage" src={process.env.PUBLIC_URL+params.row.avatar} alt="" />
+            <img className="userListImage" src={PUBLIC_URL + params.row.avatar} alt="" />
             {params.row.username}
           </div>
         );
@@ -36,11 +37,11 @@ export default function UserList() {
       width: 150,
       renderCell: (params) => (
         <>
-          <Link to={'/user/'+params.row.id}>
+          <Link to={'/user/' + params.row.id}>
             <button className="userListEdit">Edit</button>
           </Link>
 
-          <DeleteOutline className="userListDelete" onClick={()=>handleDelete(params.row.id)} />
+          <DeleteOutline className="userListDelete" onClick={() => handleDelete(params.row.id)} />
         </>
       ),
     },

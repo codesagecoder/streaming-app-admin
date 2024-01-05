@@ -1,6 +1,6 @@
 import "./list.css";
 import { Link, useLocation, useParams } from "react-router-dom";
-// import { Publish } from "@material-ui/icons";
+// import { Publish } from "@mui/icons-material";
 import { ListContext } from "../../context/listContext/ListContext";
 import { updateMovie } from "../../context/movieContext/apiCalls";
 import { useContext } from "react";
@@ -13,7 +13,7 @@ export default function List() {
   const { dispatch } = useContext(ListContext);
 
   async function getMovie() {
-    const res = await axios.get("/lists/find/" + params.listId, {
+    const res = await axios.get("/api/lists/find/" + params.listId, {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
