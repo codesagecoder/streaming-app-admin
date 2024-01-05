@@ -13,8 +13,7 @@ Simply Upload and manage content, and view analytics.
 - react
 - axios
 - recharts
-- uploadthing
-- ~~firebase~~
+- firebase
 
 
 ## Screenshots

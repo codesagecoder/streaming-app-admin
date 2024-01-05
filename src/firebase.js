@@ -1,5 +1,15 @@
-export default {
-    ref() { return this },
-    put() { return this },
-    on() { return this }
+import firebase from 'firebase';
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
+
+firebase.initializeApp(firebaseConfig);
+const storage = firebase.storage();
+export default storage;
