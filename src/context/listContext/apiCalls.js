@@ -1,4 +1,4 @@
-import {createListFailure, createListStart, createListSuccess, deleteListFailure, deleteListStart, deleteListSuccess, getListsFailure, getListsStart, getListsSuccess} from './ListActions'
+import { createListFailure, createListStart, createListSuccess, deleteListFailure, deleteListStart, deleteListSuccess, getListsFailure, getListsStart, getListsSuccess } from './ListActions'
 import axios from 'axios';
 
 export const getLists = async (dispatch) => {
@@ -43,13 +43,26 @@ export const deleteList = async (id, dispatch) => {
 export const createList = async (list, dispatch) => {
     dispatch(createListStart());
     try {
-        
-        const res =await axios.post("/api/lists", list, {
+
+        const res = await axios.post("/api/lists", list, {
             headers: { token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken }
         });
         dispatch(createListSuccess(res.data));
     } catch (err) {
         console.log(list);
         dispatch(createListFailure())
+    }
+}
+
+// GET LIST
+export const getList = async (id) => {
+    try {
+        const res = await axios.get("/api/lists/find/" + id, {
+            headers: { token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken },
+        });
+
+        return res.data;
+    } catch (err) {
+        return err;
     }
 }

@@ -7,7 +7,7 @@ Simply Upload and manage content, and view analytics.
 #### Must have nodejs with npm installed (preferrably latest version).
 1. Download/clone the repository and open the folder in the cli
 2. Insall all the dependencies using `npm i` command
-3. Launch the server with `npm start` command. The app will launch on localhost:3000 automatically.
+3. Launch the server with `npm run dev` command. The app will launch on localhost:3000 automatically.
 
 ## Dependencies
 - react

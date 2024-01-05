@@ -3,34 +3,24 @@ import { Link, useLocation, useParams } from "react-router-dom";
 // import { Publish } from "@mui/icons-material";
 import { ListContext } from "../../context/listContext/ListContext";
 import { updateMovie } from "../../context/movieContext/apiCalls";
+import { getList } from "../../context/listContext/apiCalls";
 import { useContext } from "react";
 import { useState } from "react";
-import axios from "axios";
 
 export default function List() {
   const location = useLocation();
   const params = useParams();
   const { dispatch } = useContext(ListContext);
+  const [list, setList] = useState(location.state ?? {});
 
-  async function getMovie() {
-    const res = await axios.get("/api/lists/find/" + params.listId, {
-      headers: {
-        token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
-      },
-    });
-    setList(res.data);
-  }
-
-  const [list, setList] = useState(
-    location.hasOwnProperty("list") ? location.list : {}
-  );
-  Object.keys(list).length === 0 && getMovie();
+  if (Object.keys(list).length == 0) getList(params.listId).then((data) => setList(data));
 
   const handleUpdate = (e) => {
     e.preventDefault();
     updateMovie(list, dispatch);
     setList();
   };
+
   return (
     <div className="product">
       <div className="productTitleContainer">

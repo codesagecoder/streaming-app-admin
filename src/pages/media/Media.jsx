@@ -1,20 +1,19 @@
-import { Link, useParams } from "react-router-dom";
-import "./media.css";
+import { Link, useLocation, useParams } from "react-router-dom";
 // import Chart from "../../components/chart/Chart";
 import { Publish } from "@mui/icons-material";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { MovieContext } from "../../context/movieContext/MovieContext";
 import { getMovie, updateMovie } from "../../context/movieContext/apiCalls";
+import "./media.css";
 
 export default function Media() {
+  const location = useLocation();
   const params = useParams();
   const { dispatch } = useContext(MovieContext);
 
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState(location.state ?? {});
 
-  useEffect(() => {
-    getMovie(params.movieId).then((data) => { setMovie(data) });
-  }, [])
+  if (Object.keys(movie).length == 0) getMovie(params.movieId).then(data => setMovie(data));
 
   const handleUpdate = (e) => {
     e.preventDefault();
