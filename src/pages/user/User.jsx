@@ -7,9 +7,8 @@ import {
   Publish,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { PUBLIC_URL } from "../../constansts";
+import avatar from '../../assets/no-user.jpg';
 import "./user.css";
-// import Luffy from './Luffy.jpg'
 
 export default function User() {
   return (
@@ -24,7 +23,7 @@ export default function User() {
         <div className="userShow">
           <div className="userShowTop">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/firstapp-f0082.appspot.com/o/no-user.jpg?alt=media&token=7c680fad-b0a6-4869-b908-3f92b74ea045"
+              src={avatar}
               alt=""
               className="userShowImg"
             />
@@ -106,7 +105,7 @@ export default function User() {
             <div className="userUpdateRight">
               <div className="userUpdateUpload">
                 <img
-                  src={PUBLIC_URL + "/no-user.jpg"}
+                  src={avatar}
                   alt=""
                   className="userUpdateImg"
                 />

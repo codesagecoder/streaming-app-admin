@@ -1,3 +1,5 @@
+import avatar from './assets/no-user.jpg';
+
 export const userData = [
     {
       name: "Jan",
@@ -53,7 +55,7 @@ export const userData = [
     {
       id: 1,
       username: "John",
-      avatar: "/no-user.jpg",
+      avatar,
       email: "john@leaf.com",
       status: "Approved",
       transaction: "$10",
@@ -63,7 +65,7 @@ export const userData = [
     {
       id: 4,
       username: "Adam",
-      avatar: "/no-user.jpg",
+      avatar,
       email: "adam@leaf.com",
       status: "Declined",
       transaction: "$55",
@@ -73,7 +75,7 @@ export const userData = [
     {
       id: 2,
       username: "codeage",
-      avatar: "/no-user.jpg",
+      avatar,
       email: "codesage@leaf.com",
       status: "Approved",
       transaction: "$120",
@@ -82,7 +84,7 @@ export const userData = [
     {
       id: 3,
       username: "shaun",
-      avatar: "/no-user.jpg",
+      avatar,
       email: "shaun@leaf.com",
       status: "Pending",
       transaction: "$27",

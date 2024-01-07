@@ -1,4 +1,4 @@
-import { PUBLIC_URL } from "../../constansts";
+import avatar from '../../assets/no-user.jpg';
 import "./widgetLg.css";
 
 export default function WidgetLg({ data }) {
@@ -21,7 +21,7 @@ export default function WidgetLg({ data }) {
             <tr key={user.id} className="widgetLgTr">
               <td className="widgetLgUser">
                 <img
-                  src={PUBLIC_URL + "/no-user.jpg"}
+                  src={avatar}
                   alt=""
                   className="widgetLgImg"
                 />

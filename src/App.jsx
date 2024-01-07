@@ -22,7 +22,7 @@ function App() {
   const { user } = useContext(AuthContext);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/admin">
       <Routes>
         <Route element={<Router to='/login' allow={!!user} />}>
           <Route element={<Layout />}>

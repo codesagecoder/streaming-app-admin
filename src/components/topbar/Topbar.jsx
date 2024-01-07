@@ -1,6 +1,6 @@
-import { Language, NotificationsNone, Settings } from '@mui/icons-material'
-import "./topbar.css"
-import { PUBLIC_URL } from '../../constansts'
+import { Language, NotificationsNone, Settings } from '@mui/icons-material';
+import "./topbar.css";
+import avatar from '../../assets/no-user.jpg';
 
 export default function Topbar() {
     return (
@@ -22,7 +22,7 @@ export default function Topbar() {
                     <div className="topbarIconContainer">
                         <Settings />
                     </div>
-                    <img src={PUBLIC_URL+"/no-user.jpg"} alt="" className="topAvatar" />
+                    <img src={avatar} alt="" className="topAvatar" />
                 </div>
             </div>
         </div>

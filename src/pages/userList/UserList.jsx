@@ -4,7 +4,6 @@ import "./userList.css";
 import { userRows as rows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { PUBLIC_URL } from "../../constansts";
 
 export default function UserList() {
   const [data, setData] = useState(rows);
@@ -22,7 +21,7 @@ export default function UserList() {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImage" src={PUBLIC_URL + params.row.avatar} alt="" />
+            <img className="userListImage" src={params.row.avatar} alt="" />
             {params.row.username}
           </div>
         );
