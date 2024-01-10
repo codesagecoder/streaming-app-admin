@@ -17,6 +17,7 @@ import User from "./pages/user/User";
 import UserList from "./pages/userList/UserList";
 
 import './App.css';
+import NotFound from "./pages/404";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -45,6 +46,8 @@ function App() {
         <Route element={<Router to='/' allow={!user} />}>
           <Route path="/login" element={<Login />} />
         </Route>
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
